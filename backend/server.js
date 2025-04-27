@@ -36,6 +36,9 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/quiz-app'
   });
 
 // Routes
+app.get('/', (req, res) => {
+  res.send('Quizmaster backend API is running by Vkaushik2607...');
+});
 app.use('/api/auth', authRoutes);
 app.use('/api/quizzes', quizRoutes);
 app.use('/api/attempts', attemptRoutes);
